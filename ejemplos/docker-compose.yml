@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  webserv:
+    build: web
+    ports:
+      - ${PORT-80}:80
+    volumes:
+      - ./webserv:/static
+      
+  wordserv:
+    build: words
+    ports:
+      - ${PORT-8080}:8080
+    
+  postgress:
+    image: db
+    restart: always
+     
+
+    
+  
+
+
+
+
+
+
+    
